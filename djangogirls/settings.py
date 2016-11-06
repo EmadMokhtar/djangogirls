@@ -1,6 +1,6 @@
 import os
-import dj_database_url
 
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -67,7 +67,9 @@ WSGI_APPLICATION = 'djangogirls.wsgi.application'
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(
-    default='postgres://postgres:@localhost:5432/djangogirls')
+    default='postgres://postgres:@localhost:5433/djangogirls'
+    # default='sqlite:////%s' % os.path.join(BASE_DIR, 'djangogirls.sqlite3')
+    )
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
